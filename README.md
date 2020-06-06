@@ -11,7 +11,7 @@ Neste projeto, vamos realizar a integração entre duas plataformas, exportar os
 - [Obter Apikey](https://ajuda.bling.com.br/hc/pt-br/articles/360046937853-Introdu%C3%A7%C3%A3o-para-a-API-do-Bling-para-desenvolvedores-) para o Bling
 - Criação de conta no Pipedrive
 - [Obter Apikey](https://pipedrive.readme.io/docs/how-to-find-the-api-token) para o Pipedrive
-- Criação de conta no Atlas MongoDB
+- Criação de conta no [Atlas MongoDB](https://www.mongodb.com/cloud/atlas/register?v=1)
 
 ## Configuração do Ambiente
 
@@ -30,7 +30,7 @@ $ npm install
 
 ## Arquivos de Configuração
 
-No diretório do projeto, temos o arquivo .env onde as Api Keys devem ser registradas para o consumo da aplicação, nele também deve ser registrada a connection string de conexão com o mongodb e os endpoints das APIs.<br>
+No diretório do projeto, temos o arquivo .env onde as Api Keys devem ser registradas para o consumo da aplicação, nele também deve ser registrada a connection string de conexão com o MongoDB e os endpoints das APIs.<br>
 
 Edite as referências do arquivo conforme exemplo:
 
