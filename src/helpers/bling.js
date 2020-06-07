@@ -2,14 +2,14 @@ const axios = require('axios');
 const { cnpj } = require('cpf-cnpj-validator');
 const Parser = require('xml2js');
 require('dotenv').config();
-
+const Deals = require('./Deals')
+const dealsObj = new Deals();
 
     module.exports = {
         async sendBling(data) {
-        
             try {
             let xmlobj;
-            let response = []    
+            let response = [];
             for (const item of data) {  
                 xmlobj = {
                     pedido: {
@@ -96,7 +96,7 @@ require('dotenv').config();
                             obs_internas: "Testando o campo observações internas do pedido"
                         }           
                 }
-
+                await dealsObj.update(item._id, item.title, item.value, item.status, item.won_time, 'integrated')
                 let builder = new Parser.Builder();
                 let xmldata = builder.buildObject(xmlobj);
                 let xmlEncodeURI = encodeURI(xmldata);
@@ -108,10 +108,4 @@ require('dotenv').config();
                return e 
             };        
         },
-        
-        async get(){
-            
-            const res = await axios.post(process.env.URL_BLING + `?apikey=${process.env.TOKEN_BLING}&xml=${xmlEncodeURI}`);
-        }
-
     };

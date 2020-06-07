@@ -24,7 +24,7 @@ $ git clone git@github.com:CaioSRocha/projeto-linkapi.git
 Em seguida, navegue até o diretório do projeto e carregue todas as dependências do projeto:
 
 ```
-$ cd projeto-linkapi.git
+$ cd projeto-linkapi
 $ npm install
 ```
 
@@ -61,7 +61,7 @@ A collection definida no passo anterior, será criada no MongoDB.
 No Postman, envie a requisição abaixo em um método POST, para atualizar o MongoDB com os dados do Pipedrive:
 
 ```
-htttp://localhost:8080/api/v1/create
+htttp://localhost:8080/api/v1/deals/orders
 ```
 
 Em seguida, a requisção abaixo em um método POST, para importar os dados do MongoDB para o Bling:
