@@ -34,7 +34,7 @@ module.exports = {
         try {
             const data = await Dealdb.find({integration: 'not integrated'});
             if(!data[0]){
-                return res.status(200).json('No to requests for integration');  
+                return res.status(200).json('There are no integration requests');  
             }
             const dataBling = await bling.sendBling(data);
             return res.status(201).json(dataBling);
