@@ -7,7 +7,7 @@ const bling = require('../helpers/bling');
 const dealsObj = new Deals();
  
 module.exports = {
-    async create(req, res){
+    async createDeals(req, res){
         try {
             const filter = await Pipedriver.filterCreate();
             
@@ -46,6 +46,9 @@ module.exports = {
     async getDeals(req, res){
         try {
            const data = await Dealdb.find();
+           if(!data[0]){
+            return res.status(200).json({Status: 'No orders registered' });  
+           }
             return res.status(200).json(data);
         } catch (e) {
             return res.status(500).json(e);

@@ -11,7 +11,7 @@ module.exports = {
       return response.data;
     
   },
-
+  
   async filterCreate(){
 
     try {
@@ -28,7 +28,6 @@ module.exports = {
       });
       return sendCreate
     } catch (e) {
-      console.log(e)
       return e 
     }
 

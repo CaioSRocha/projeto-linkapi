@@ -6,6 +6,6 @@ const ApiController = require('./controllers/dealsController');
 // Controllers
 routes.post('/deals', ApiController.dealsBling);
 routes.get('/deals', ApiController.getDeals);
-routes.post('/deals/orders', ApiController.create);
+routes.post('/deals/orders', ApiController.createDeals);
 
 module.exports = routes;
